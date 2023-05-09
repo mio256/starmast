@@ -1,4 +1,6 @@
+import pprint
 from mastodon import Mastodon
 
 mastodon = Mastodon(access_token='pytooter_usercred.secret')
-mastodon.toot('Tooting from Python using #mastodonpy !')
+r = mastodon.timeline_home()
+pprint.pprint(r)

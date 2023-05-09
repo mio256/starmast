@@ -23,6 +23,8 @@ python main.py
 
 ## Reference
 
+[Mastdon.py](https://mastodonpy.readthedocs.io/en/stable/index.html)
+
 ## Author
 
 [mio256](https://github.com/mio256)
