@@ -4,3 +4,6 @@
 
 # mastdon
 *.secret
+
+# tmp
+tmp.*

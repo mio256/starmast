@@ -12,7 +12,9 @@ def json_serial(obj):
 
 mastodon = Mastodon(access_token='pytooter_usercred.secret')
 r = mastodon.timeline_home()
-pprint.pprint(r)
+for i in r:
+    print(i.account.username)
+    print(i.content)
 
 with open('tmp.json', 'w') as f:
     json.dump(r, f, indent=4, default=json_serial)
