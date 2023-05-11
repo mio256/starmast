@@ -1,7 +1,9 @@
-import pprint
+import os
 import json
 from datetime import date, datetime
 from mastodon import Mastodon
+from dotenv import load_dotenv
+load_dotenv()
 
 
 def json_serial(obj):
@@ -10,7 +12,13 @@ def json_serial(obj):
     raise TypeError("Type %s not serializable" % type(obj))
 
 
-mastodon = Mastodon(access_token='pytooter_usercred.secret')
+mastodon = Mastodon(
+    os.environ['CLIENT_ID'],
+    os.environ['CLIENT_SECRET'],
+    os.environ['ACCESS_TOKEN'],
+    os.environ['API_BASE_URL'],
+)
+
 r = mastodon.timeline_home()
 for i in r:
     print(i.account.username)

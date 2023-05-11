@@ -2,8 +2,5 @@
 /venv/
 .env
 
-# mastdon
-*.secret
-
 # tmp
 tmp.*
